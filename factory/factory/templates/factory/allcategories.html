@@ -1,8 +1,10 @@
-<h3>
+<ul>
 {% for i in categories %}
-    <li> {{ i.name }}</li>
-    <li> {{ i.product_link.name }} </li>
+    <li><h2> {{ i.name }} </h2></li>
+    {% for s in i.product_link.all %}
+    <li><h3> {{ s.name }} </h3></li>
 
 {% endfor %}
+{% endfor %}
 
-</h3>
+</ul>
