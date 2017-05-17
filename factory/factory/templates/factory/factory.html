@@ -1,0 +1,7 @@
+{% for i in category %}
+    <h2> {{ i.name }}</h2>
+    {% for v in products %}
+        <h3> {{ v.name }}</h3>
+
+    {% endfor %}
+{% endfor %}

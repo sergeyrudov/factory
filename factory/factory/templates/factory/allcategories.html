@@ -1,8 +1,8 @@
 <ul>
 {% for i in categories %}
-    <li><h3> {{ i.name }} </h3></li>
+    <li><h3> <a href="factory/{{ i.id }}" > {{ i.name }} </a> </h3></li>
     {% for s in i.category_link.all %}
-    <li><h3> <a href="/all/category-id-{{ i.id }}"> {{ s.name }} </a> </h3></li>
+    <li><h3> <a href="category/{{ i.id }}"> {{ s.name }} </a> </h3></li>
         {% for v in i.product_link.all %}
             <li><h5> {{ v.name }}</h5></li>
 
