@@ -9,3 +9,7 @@ def allcategories(request):
     context = {'categories': factory}
     return render(request, 'factory/allcategories.html', context)
 
+def category(request,id):
+    cat = Category.objects.get(id=id)
+    context = {'category' : cat}
+    return render(request, 'factory/category.html', context)
